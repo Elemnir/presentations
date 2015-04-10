@@ -1,0 +1,14 @@
+<html>
+
+<head>
+<title>Demo - Ticket List</title>
+</head>
+
+<body>
+<h1>Ticket List</h1>
+{% for ticket in ticketlist %}
+    <a href="/{{ ticket.id }}/">{{ ticket }}</a><br>
+{% endfor %}
+</body>
+
+</html>

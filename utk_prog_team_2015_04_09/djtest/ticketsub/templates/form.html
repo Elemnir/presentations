@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<title>Demo - Ticket Form</title>
+<style>
+.errorlist {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+.errorlist li {
+    list-style: None;
+    color: red;
+    font-size: 0.8em;
+}
+</style>
+</head>
+
+<body>
+    <h1>Submit a Ticket</h1>
+
+    <form method="post" action="">
+    {% csrf_token %}
+    
+    <label for="id_subject">Subject:</label><br>
+    {{ form.subject.errors }}
+    {{ form.subject }}
+    <br><br>
+    <label for="id_sender">Your Email Address:</label><br>
+    {{ form.sender.errors }}
+    {{ form.sender }}
+    <br><br>
+    <label for="id_msgbody">Please describe the issue:</label><br>
+    {{ form.msgbody.errors }}
+    {{ form.msgbody }}
+    <br><br>
+    <input type="submit" value="Submit Ticket">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Flask Intro!</title>
+        <style type="text/css">
+            body {
+                background-color: #CCCCCC;
+                color: #222222;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    
+    <body>
+    {% if r %}
+        <h1>Requester IP was: {{ r.remote_addr }}</h1>
+    {% endif %}
+    </body>
+</html>
